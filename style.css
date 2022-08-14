@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(222, 26%, 31%);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+.container {
+    padding: 1rem;
+}
+#screen {
+    background-color: hsl(224, 36%, 15%)    ;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 40px;
+    color: white;
+    width: 30rem;
+    height: 9rem;
+    text-align: right;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+#keypad {
+    background-color: hsl(223, 31%, 20%);
+    gap: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 00.5rem;
+}
+#reset, #equal {
+    grid-column: span 2;
+    height: 2.5rem;
+    width: auto;
+}
+button {
+    cursor: pointer;
+    height: 2.5rem;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 000.5rem;
+    border: 0px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+.white {
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 0px hsl(28, 16%, 65%);
+    transition: all 0.5s;
+}
+.white:hover {
+    background-color: white;
+}
+.gray {
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    box-shadow: 0px 3px 0px hsl(224, 28%, 35%);
+    transition: all 0.5s;
+}
+.gray:hover {
+    background-color: hsl(225, 21%, 59%);
+}
+.red {
+    background-color: hsl(6, 63%, 50%);
+    color: #fff;
+    box-shadow: 0px 3px 0px hsl(6, 70%, 34%);
+    transition: all 0.5s;
+}
+.red:hover {
+    background-color: hsl(6, 63%, 60%);
+}
+nav {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.left {
+    margin-bottom: -2rem;
+    font-size: 25px;
+}
+.right {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.bar-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.bar-nums, #bars {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.bar-nums {
+    margin-left: 0.4rem;
+    gap: 1rem;
+}
+.theme {
+    display: flex;
+    align-items: flex-end;
+}
+#bars {
+    background-color: hsl(223, 31%, 20%);
+    padding: 4px;
+    border-radius: 15px;
+}
+#bar1, #bar2, #bar3 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer; 
+    background-color: hsl(6, 100%, 50%);
+    opacity: 0;
+}
+#bar1 {
+    opacity: 1;
+}
