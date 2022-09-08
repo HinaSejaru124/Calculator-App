@@ -44,7 +44,7 @@ body {
     grid-template-rows: repeat(5, 1fr);
     border-radius: 00.5rem;
 }
-#reset, #equal {
+.reset, .equal {
     grid-column: span 2;
     height: 2.5rem;
     width: auto;
@@ -59,31 +59,28 @@ button {
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
 }
-.white {
+#white {
     color: hsl(221, 14%, 31%);
     background-color: hsl(30, 25%, 89%);
-    box-shadow: 0px 3px 0px hsl(28, 16%, 65%);
     transition: all 0.5s;
 }
-.white:hover {
+#white:hover {
     background-color: white;
 }
-.gray {
+#gray {
     background-color: hsl(225, 21%, 49%);
     color: white;
-    box-shadow: 0px 3px 0px hsl(224, 28%, 35%);
     transition: all 0.5s;
 }
-.gray:hover {
+#gray:hover {
     background-color: hsl(225, 21%, 59%);
 }
-.red {
+#red {
     background-color: hsl(6, 63%, 50%);
     color: #fff;
-    box-shadow: 0px 3px 0px hsl(6, 70%, 34%);
     transition: all 0.5s;
 }
-.red:hover {
+#red:hover {
     background-color: hsl(6, 63%, 60%);
 }
 nav {
@@ -131,8 +128,9 @@ nav {
     width: 15px;
     border-radius: 50%;
     cursor: pointer; 
-    background-color: hsl(6, 100%, 50%);
+    background-color: hsl(6, 63%, 50%);
     opacity: 0;
+    transition: all 0.5s;
 }
 #bar1 {
     opacity: 1;

@@ -13,7 +13,7 @@ let operation = document.querySelectorAll("[data-operation]"),
     cosh = document.querySelector("[cosh]"),
     tanh = document.querySelector("[tanh]"),
     datatrigo = document.querySelector("[datatrigo]");
-firstNumber = "", secondNumber = "", sym = "", trigosym = "", ans = "";
+firstNumber = "", secondNumber = "", sym = "", trigosym = "";
 sin.addEventListener("click", () => {
     if (trigosym === "" && firstNumber === "") {
         trigosym = sin.innerHTML;
@@ -96,55 +96,58 @@ equal.addEventListener("click", () => {
     if (sym !== "") {
         switch (sym) {
             case '+':
-                ans = parseFloat(firstNumber) + parseFloat(secondNumber);
+                firstNumber = parseFloat(firstNumber) + parseFloat(secondNumber);
                 break;
             case '-':
-                ans = parseFloat(firstNumber) - parseFloat(secondNumber);
+                firstNumber = parseFloat(firstNumber) - parseFloat(secondNumber);
                 break;
             case '*':
-                ans = parseFloat(firstNumber) * parseFloat(secondNumber);
+                firstNumber = parseFloat(firstNumber) * parseFloat(secondNumber);
                 break;
             case '^':
-                ans =  Math.pow(parseFloat(firstNumber), parseFloat(secondNumber)) ;
+                firstNumber = Math.pow(parseFloat(firstNumber), parseFloat(secondNumber));
                 break;
             case '!':
-                ans = fact(parseFloat(firstNumber));
+                firstNumber = fact(parseFloat(firstNumber));
                 break;
             default:
-                ans = parseFloat(firstNumber) / parseFloat(secondNumber);
+                firstNumber = parseFloat(firstNumber) / parseFloat(secondNumber);
                 break;
         }
     }
     if (trigosym !== "") {
         switch (trigosym) {
             case 'sin':
-                ans = Math.sin(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.sin(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
             case 'cos':
-                ans = Math.cos(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.cos(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
             case 'tan':
-                ans = Math.tan(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.tan(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
             case 'sinh':
-                ans = Math.sinh(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.sinh(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
             case 'cosh':
-                ans = Math.cosh(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.cosh(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
             case 'tanh':
-                ans = Math.tanh(parseFloat(firstNumber) *  (Math.PI) / 180).toFixed(3);
+                firstNumber = Math.tanh(parseFloat(firstNumber) * (Math.PI) / 180).toFixed(2);
                 break;
 
             default:
                 break;
         }
     }
+    if (trigosym === "" && sym === "") {
+        firstNumber = parseFloat(firstNumber);
+    }
 
 
     trigosym = "";
     datatrigo.innerHTML = trigosym;
-    firstvalue.innerHTML = ans;
+    firstvalue.innerHTML = firstNumber;
     firstNumber = "";
     secondNumber = "";
     sym = "";
@@ -187,9 +190,10 @@ let body = document.getElementById("body");
 let bar = document.getElementById("bars");
 let screen = document.getElementById("screen");
 let keypad = document.getElementById("keypad");
-let white = document.getElementsByClassName("white");
-let gray = document.getElementsByClassName("gray");
-let red = document.getElementsByClassName("red");
+let white = document.querySelectorAll("[white]")
+let gray = document.querySelectorAll("[gray]")
+let red = document.querySelector("[red]")
+let nav = document.getElementById("nav");
 function themeone() {
     bar1.style.opacity = 1;
     bar2.style.opacity = 0;
@@ -200,6 +204,18 @@ function themeone() {
     screen.style.backgroundColor = "hsl(224, 36%, 15%)";
     bar.style.backgroundColor = "hsl(223, 31%, 20%)";
     keypad.style.backgroundColor = "hsl(223, 31%, 20%)";
+    screen.style.color = "white";
+    nav.style.color = "white";
+    white.forEach((white) => {
+        white.style.backgroundColor = "hsl(30, 25%, 89%)"
+        white.style.color = "hsl(221, 14%, 31%)"
+    })
+    gray.forEach((white) => {
+        white.style.backgroundColor = "hsl(225, 21%, 49%)"
+        white.style.color = "white"
+    })
+    red.style.backgroundColor = "hsl(6, 63%, 50%)"
+    red.style.color = "white"
 
 }
 function themesec() {
@@ -213,8 +229,18 @@ function themesec() {
     bar.style.backgroundColor = "hsl(0, 5%, 81%)";
     keypad.style.backgroundColor = "hsl(0, 5%, 81%)";
     screen.style.color = "hsl(60, 10%, 19%)";
-    document.button.style.color = "hsl(60, 10%, 19%)";
-    document.nodeValue.style.color = "hsl(60, 10%, 19%)"
+    nav.style.color = "hsl(60, 10%, 19%)";
+    white.forEach((white) => {
+        white.style.backgroundColor = "hsl(45, 7%, 89%)"
+        white.style.color = "hsl(60, 10%, 19%)"
+    })
+    gray.forEach((white) => {
+        white.style.backgroundColor = "hsl(185, 42%, 37%)"
+        white.style.color = "white"
+    })
+    red.style.backgroundColor = "hsl(25, 98%, 40%)"
+    red.style.color = "white"
+    bar2.style.backgroundColor = "hsl(25, 98%, 40%)"
 }
 function themethi() {
     bar1.style.opacity = 0;
@@ -226,4 +252,17 @@ function themethi() {
     document.body.style.transitionDuration = "0.5s";
     bar.style.backgroundColor = "hsl(268, 71%, 12%)";
     keypad.style.backgroundColor = "hsl(268, 71%, 12%)";
+    screen.style.color = "hsl(52, 100%, 62%)";
+    nav.style.color = "hsl(52, 100%, 62%)";
+    white.forEach((white) => {
+        white.style.backgroundColor = "hsl(268, 47%, 21%)"
+        white.style.color = "hsl(52, 100%, 62%)"
+    })
+    gray.forEach((white) => {
+        white.style.backgroundColor = "hsl(281, 89%, 26%)"
+        white.style.color = "white"
+    })
+    red.style.backgroundColor = "hsl(176, 100%, 44%)"
+    red.style.color = "black"
+    bar3.style.backgroundColor = "hsl(176, 100%, 44%)"
 }

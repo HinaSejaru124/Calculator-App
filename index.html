@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Mentor | Calculator App</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend Mentor | Calculator App</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body id="body">
-    <div class="container">
-        <nav>
-            <div class="left">calc</div>
-            <div class="right">
-                <div class="theme">THEME</div>
-                <div class="bar-div">
-                    <div class="bar-nums">
-                        <div class="bar-num">1</div>
-                        <div class="bar-num">2</div>
-                        <div class="bar-num">3</div>
-                    </div>
-                    <div id="bars">
-                        <div id="bar1" onclick="themeone()"></div>
-                        <div id="bar2" onclick="themesec()"></div>
-                        <div id="bar3" onclick="themethi()"></div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div id="screen">
-            <div datatrigo></div>
-            <div data-firstvalue></div>
-            <div datasym></div>
-            <div data-secondvalue></div>
-        </div>
-        <div id="keypad">
-            <button class="keys white" data-operation>!</button>
-            <button class="keys white" data-operation>^</button>
-            <button class="keys white" data-number>.</button>
-            <button class="keys gray" data-delete gray>DEL</button>
-            <button class="keys white" sin id= "sin">sin</button>
-            <button class="keys white" cos id= "cos">cos</button>
-            <button class="keys white" tan id= "tan">tan</button>
-            <button class="keys white" data-operation>+</button>
-            <button class="keys white" sinh id= "">sinh</button>
-            <button class="keys white" cosh id= "">cosh</button>
-            <button class="keys white" tanh id= "">tanh</button>
-            <button class="keys white" data-operation>-</button>
-            <button class="keys white" data-number>7</button>
-            <button class="keys white" data-number>8</button>
-            <button class="keys white" data-number>9</button>
-            <button class="keys white" data-operation>*</button>
-            <button class="keys white" data-number>4</button>
-            <button class="keys white" data-number>5</button>
-            <button class="keys white" data-number>6</button>
-            <button class="keys white" data-operation>/</button>
-            <button class="keys white" data-number>1</button>
-            <button class="keys white" data-number>2</button>
-            <button class="keys white" data-number>3</button>
-            <button class="keys white" data-number>0</button>
-            <button class="keys gray" id = "reset" data-reset gray>RESET</button>
-            <button class="keys red" id = "equal" data-equal red>=</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+	<div class="container">
+		<nav id="nav">
+			<div class="left">calc</div>
+			<div class="right">
+				<div class="theme">THEME</div>
+				<div class="bar-div">
+					<div class="bar-nums">
+						<div class="bar-num">1</div>
+						<div class="bar-num">2</div>
+						<div class="bar-num">3</div>
+					</div>
+					<div id="bars">
+						<div id="bar1" onclick="themeone()"></div>
+						<div id="bar2" onclick="themesec()"></div>
+						<div id="bar3" onclick="themethi()"></div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="screen">
+			<div datatrigo></div>
+			<div data-firstvalue></div>
+			<div datasym></div>
+			<div data-secondvalue></div>
+		</div>
+		<div id="keypad">
+			<button class="keys" id="white" white data-operation>!</button>
+			<button class="keys" id="white" white data-operation>^</button>
+			<button class="keys" id="white" white data-number>.</button>
+			<button class="keys" id="gray" data-delete gray>DEL</button>
+			<button class="keys" id="white" white sin id="sin">sin</button>
+			<button class="keys" id="white" white cos id="cos">cos</button>
+			<button class="keys" id="white" white tan id="tan">tan</button>
+			<button class="keys" id="white" white data-operation>+</button>
+			<button class="keys" id="white" white sinh id="sinh">sinh</button>
+			<button class="keys" id="white" white cosh id="cosh">cosh</button>
+			<button class="keys" id="white" white tanh id="tanh">tanh</button>
+			<button class="keys" id="white" white data-operation>-</button>
+			<button class="keys" id="white" white data-number>7</button>
+			<button class="keys" id="white" white data-number>8</button>
+			<button class="keys" id="white" white data-number>9</button>
+			<button class="keys" id="white" white data-operation>*</button>
+			<button class="keys" id="white" white data-number>4</button>
+			<button class="keys" id="white" white data-number>5</button>
+			<button class="keys" id="white" white data-number>6</button>
+			<button class="keys" id="white" white data-operation>/</button>
+			<button class="keys" id="white" white data-number>1</button>
+			<button class="keys" id="white" white data-number>2</button>
+			<button class="keys" id="white" white data-number>3</button>
+			<button class="keys" id="white" white data-number>0</button>
+			<button class="keys reset" id="gray" data-reset gray>RESET</button>
+			<button class="keys equal" id="red" data-equal red>=</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
+
 </html>
